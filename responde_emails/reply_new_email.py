@@ -59,6 +59,24 @@ def show_chatty_threads(service):
     threads = (
         service.users().threads().list(userId="me").execute().get("threads", [])
     )
+    if not os.path.exists(current_path+'/email_ids.csv'):
+        with open(current_path+'/email_ids.csv', 'w') as f:
+          existing_email_ids = []
+        varre="n"
+        varre = input("Voce deseja varrer e armazenar todos os emails atuais? (s/N) ")
+        if varre.lower() == "s":
+          for thread in threads:
+            tdata = (
+                service.users().threads().get(userId="me", id=thread["id"]).execute()
+            )
+            email_ids = [msg["id"] for msg in tdata["messages"]]
+            for email_id in email_ids:
+              existing_email_ids.append(email_id)
+          print("Email_ids varridos: ", existing_email_ids)
+          with open(current_path+'/email_ids.csv', 'a') as f:
+            for email_id in existing_email_ids:
+              f.write(email_id + '\n')
+
     for thread in threads:
       tdata = (
           service.users().threads().get(userId="me", id=thread["id"]).execute()
@@ -69,13 +87,9 @@ def show_chatty_threads(service):
       email_ids = [msg["id"] for msg in tdata["messages"]]
       
       # load email_ids from csv file
-      # check if csv file exists if not create it
-      if not os.path.exists(current_path+'/email_ids.csv'):
-        with open(current_path+'/email_ids.csv', 'w') as f:
-          existing_email_ids = []
-      else:
-        with open(current_path+'/email_ids.csv', 'r') as f:
-          existing_email_ids = f.read().splitlines()
+
+      with open(current_path+'/email_ids.csv', 'r') as f:
+        existing_email_ids = f.read().splitlines()
       # check if email_ids already exist in csv file and append new_email_ids array
       for email_id in email_ids:
         if email_id not in existing_email_ids:
