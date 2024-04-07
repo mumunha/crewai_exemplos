@@ -1,0 +1,12 @@
+preparar_email:
+  description: >
+    Ler o email ou sequencia de emails e preparar o email para ser respondido.
+  expected_output: >
+    Um email objetivo em resposta a: {topic}
+
+revisar_email:
+  description: >
+    Revisar o email e verificar se o contexto esta bom e nao existem informacoes que possam comprometer a empresa.
+  expected_output: >
+    Um arquivo de texto '```'
+
