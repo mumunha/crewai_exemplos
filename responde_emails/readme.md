@@ -1,3 +1,6 @@
+
+[![Assista ao tutorial](https://i.ytimg.com/vi/Ry_-zNwd1rM/hqdefault.jpg)](https://youtu.be/YQc8cQn5C34)
+
 # Projeto de Automação de E-mails
 
 Este projeto é uma ferramenta de automação de e-mails destinada a simplificar o processo de envio e resposta de e-mails para uma equipe ou organização.
@@ -27,6 +30,11 @@ pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-
 
 seu_email.py.exemplo é um arquivo de exemplo que demonstra como configurar suas credenciais de e-mail para o projeto.
 Inclua seu email e renomeie removendo .exemplo, deixando o nome do arquivo como seu_email.py
+
+
+## Crie um projeto no Google Developer para criar a conexão com o API
+
+Veja no vídeo o passo-a-passo de como fazer (último capítulo do vídeo)
 
 ## Uso
 
