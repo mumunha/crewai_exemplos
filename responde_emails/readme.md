@@ -17,6 +17,12 @@ O repositório é composto pelos seguintes arquivos e diretórios:
 
 Para configurar o projeto, é copiar os arquivos par ao diretorio no qual estao main.py, e agentt.yaml + tasks.yaml para o diretorio config.
 
+## Instale as bibliotecas Google API
+
+```bash
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+```
+
 ## Exemplo de Configuração
 
 seu_email.py.exemplo é um arquivo de exemplo que demonstra como configurar suas credenciais de e-mail para o projeto.
