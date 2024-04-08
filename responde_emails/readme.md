@@ -1,5 +1,5 @@
-
-[![Assista ao tutorial](https://i.ytimg.com/vi/Ry_-zNwd1rM/hqdefault.jpg)](https://youtu.be/YQc8cQn5C34)
+<!-- 
+[![Assista ao tutorial](https://i.ytimg.com/vi/Ry_-zNwd1rM/hqdefault.jpg)](https://youtu.be/YQc8cQn5C34) -->
 
 # Projeto de Automação de E-mails
 
