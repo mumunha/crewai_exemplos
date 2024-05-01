@@ -2,6 +2,11 @@
 
 Este guia fornece as etapas necessárias para configurar o modelo Gemini da Google no seu projeto.
 
+
+Assista o vídeo para ver as instruções detalhadas
+
+
+
 ## Gerar API Key
 
 1. Acesse o console do Gemini da Google- [link](https://aistudio.google.com/app/apikey).
@@ -26,6 +31,15 @@ langchain_google_genai = "1.0.3"
 google-generativeai = "0.5.2"
 ```
 
+## Rodar os comandos poetry para atualizar as dependências
+
+
+```python
+poetry lock
+poetry install
+```
+
+
 ## Modificar o Arquivo crew.py
 
 Adicione o seguinte código no arquivo `crew.py` para configurar e inicializar o modelo:
@@ -46,6 +60,17 @@ llm = ChatGoogleGenerativeAI(
 )
 ```
 
+em todos os agentes que você tiver na sua equipe, adicione a linha `llm=llm` conforme exemplo abaixo:
+
+```python
+	@agent
+	def reporting_analyst(self) -> Agent:
+		return Agent(
+			config=self.agents_config['reporting_analyst'],
+			verbose=True,
+			llm=llm
+		)
+```
 
 no lugar do gemini-pro vc pode usar outros modelos, ver no link:
 
