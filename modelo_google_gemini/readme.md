@@ -17,9 +17,11 @@ GOOGLE_API_KEY="sua_chave_aqui"
 
 ## Atualizar Dependências
 
-Adicione as seguintes linhas no seu arquivo `pyproject.toml` para incluir as dependências necessárias:
+Adicione as seguintes linhas no seu arquivo `pyproject.toml` para incluir as dependências necessárias na categoria `[tool.poetry.dependencies]`:
 
 ```toml
+[tool.poetry.dependencies]
+...
 langchain_google_genai = "1.0.3"
 google-generativeai = "0.5.2"
 ```
