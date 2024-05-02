@@ -3,8 +3,10 @@
 Este guia fornece as etapas necessárias para configurar o modelo Gemini da Google no seu projeto.
 
 
-Assista o vídeo para ver as instruções detalhadas
+[![Assista ao Tutorial](http://img.youtube.com/vi/mfKH7NK6ixU/0.jpg)](https://youtu.be/mfKH7NK6ixU)
 
+Clique na imagem ou no link a seguir para acessar o vídeo:
+[Assistir ao Vídeo](https://youtu.be/mfKH7NK6ixU)
 
 
 ## Gerar API Key
